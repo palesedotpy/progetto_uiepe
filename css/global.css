@@ -1,0 +1,35 @@
+:root {
+    --blu-scuro: #092147;
+    --blu-chiaro: #174384;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Colors */
+.blu-scuro {
+    color: var(--blu-scuro);
+}
+.blu-chiaro {
+    color: var(--blu-chiaro);
+}
+/* Backgrounds */
+.bg-blu-scuro {
+    background-color: var(--blu-scuro);
+}
+.bg-blu-chiaro {
+    background-color: var(--blu-chiaro);
+}
+/* Borders */
+.border-blu-scuro {
+    border: 1px solid var(--blu-scuro);
+}
+.border-blu-chiaro {
+    border: 1px solid var(--blu-chiaro);
+}
+
+.full-page {
+    height: 100vh;
+}
+
