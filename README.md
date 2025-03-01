@@ -7,6 +7,6 @@
         - Il form scompare se visto da schermo piccolo
         - La casella ruolo deve essere un select
 2. JavaScript
-    2. visibilitàPassoword
+    1. visibilitàPassoword
         - c'è un bug se le funzione viene usate più volte nello stesso form
     
