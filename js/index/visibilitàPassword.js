@@ -1,9 +1,13 @@
 let passwordVisibile = false;
-let immagine = document.getElementById("immagine-mostra-password");
-let passwordInput = document.getElementById("password_input");
-
+let immagine;
+let passwordInput;
 /* Funzione per mostrare la password */
-function mostraPassword() {
+function mostraPassword(IdInput, IdImmagine, event) {
+    /* Evita che il form sia inviato */
+    event.preventDefault();
+    immagine = document.getElementById(IdImmagine);
+    passwordInput = document.getElementById(IdInput);
+
     /* 
         Alterna lo stato di visibilitò della password:
         se è visibile la nasconde, e viceversa.
@@ -17,3 +21,4 @@ function mostraPassword() {
 
 }
 
+/* TODO c'è un bug se le funzione viene usate più volte nello stesso form */
