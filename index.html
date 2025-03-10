@@ -12,8 +12,8 @@
     </head>
     
     <body>
-        <div class="container-fluid full-page">
-            <div class="row h-100 flex-column flex-md-row h-auto">
+        <div class="container-fluid full-page h-md-auto ">
+            <div class="row h-100 flex-column flex-md-row h-md-auto">
                 <div class="col-12 col-md-6 p-3 bg-blu-scuro text-white text-center d-flex flex-md-column flex-row justify-content-center align-items-center">
                     <div class="w-50 mb-4" id="logo">
                         <img src="assets/immagini/logo-gv.png" class="img-fluid logo-gv " alt="logo">
@@ -27,9 +27,9 @@
                 <!-- TODO Settare opportunatamente i required -->
                 <!-- TODO Fare in modo che raggiunto il breakdown medio l'altezza diventi 75% -->
              
-                <div class="col-12 col-md-6 p-3 text-center d-flex justify-content-center align-items-center border border-4 border-danger">
+                <div class="col-12 col-md-6 p-3 text-center d-flex justify-content-center align-items-center">
                     <!-- Form Accesso -->
-                    <form action="" method="post" class="container col-12 col-md-9  d-block" id="form-accesso"> <!-- TODO Aggiungere php | d-block-->
+                    <form action="" method="post" class="container col-12 col-md-9  d-none" id="form-accesso"> <!-- TODO Aggiungere php | d-block-->
                         <div class="row">
                             <div class="mb-3">
                                 <label for="login-email-input" class="fs-4 form-label text-start w-100">Email</label>
@@ -61,15 +61,15 @@
                     
                     <!-- Form registrazione -->
                     <!-- TODO Il form scompare se visto da schermo piccolo -->
-                    <form action="" method="post" class="container col-12 col-md-9 d-none" id="form-registrazione"> <!-- TODO Aggiungere php | d-none-->
+                    <form action="" method="post" class="container col-12 col-md-9 d-block" id="form-registrazione"> <!-- TODO Aggiungere php | d-none-->
                         <div class="row">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="mb-3">
                                     <label for="singup-nome-input" class="fs-4 form-label text-start w-100">Nome</label>
                                     <input type="nome" class="form-control" id="nome-input">
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="mb-3">
                                     <label for="singup-cognome-input" class="fs-4 form-label text-start w-100">Cognome</label>
                                     <input type="Cognome" class="form-control" id="Cognome-input">
@@ -77,13 +77,13 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="mb-3">
                                     <label for="singup-email-input" class="fs-4 form-label text-start w-100">Email</label>
                                     <input type="email" class="form-control" id="email-input">
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <!-- TODO Questo deve essere un select -->
                                 <div class="mb-3">
                                     <label for="singup-ruolo-input" class="fs-4 form-label text-start w-100">Ruolo</label>
@@ -92,7 +92,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="mb-4">
                                     <label for="singup-password-input" class="fs-4 form-label text-start w-100">Password</label>
                                     <div class="d-flex justify-content-between align-items-center">
@@ -103,7 +103,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="mb-4">
                                     <label for="singup-conferma-password-input" class="fs-4 form-label text-start w-100">Conferma Password</label>
                                     <div class="d-flex justify-content-between align-items-center">
@@ -120,7 +120,7 @@
                                 <div class=" w-75">
                                     <input type="submit" class="btn pulsante-accesso fs-5 bg-blu-chiaro text-white w-100 mb-2" value="REGISTRATI">
                                     <div>
-                                        <button type="button" class="redirect-registrazione btn w-25" onclick="switchForm(false)">Accedi</button>
+                                        <button type="button" class="redirect-registrazione btn" onclick="switchForm(false)">Accedi</button>
                                     </div>
                                 </div>
                             </div>
