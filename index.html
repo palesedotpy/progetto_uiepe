@@ -25,11 +25,10 @@
                     </div>
                 </div>
                 <!-- TODO Settare opportunatamente i required -->
-                <!-- TODO Fare in modo che raggiunto il breakdown medio l'altezza diventi 75% -->
              
                 <div class="col-12 col-md-6 p-3 text-center d-flex justify-content-center align-items-center">
                     <!-- Form Accesso -->
-                    <form action="" method="post" class="container col-12 col-md-9  d-none" id="form-accesso"> <!-- TODO Aggiungere php | d-block-->
+                    <form action="" method="post" class="container col-12 col-md-9 d-block" name="form-accesso" id="form-accesso"> <!-- TODO Aggiungere php | d-block-->
                         <div class="row">
                             <div class="mb-3">
                                 <label for="login-email-input" class="fs-4 form-label text-start w-100">Email</label>
@@ -40,11 +39,12 @@
                             <div class="mb-4">
                                 <label for="password_input" class="fs-4 form-label text-start w-100">Password</label>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <input type="password" class="form-control" id="login-password-input" name="password">
+                                    <input type="password" class="form-control" id="login-password-input" name="password" aria-describedby="passwordDimenticata">
                                     <button type="button" class="mostra-password btn" id="show-password" data-password-visibile onclick="mostraPassword('login-password-input', 'immagine-mostra-password', this, event)">
                                         <img src="assets/immagini/mostra.png" class="img-fluid mostra-password" alt="mostra password" id="immagine-mostra-password">
                                     </button>
                                 </div>
+                                <div class="d-flex justify-content-start" id="passwordDimenticata" onclick="switchForm('form-accesso', 'form-password-dimenticata')"><a href="#"><u>Password dimenticata</u></a></div>
                             </div>
                         </div>
                         <div class="row">
@@ -52,7 +52,7 @@
                                 <div class=" w-75">
                                     <input type="submit" class="btn pulsante-accesso fs-5 bg-blu-chiaro text-white w-100 mb-2" value="ACCEDI">
                                     <div>
-                                        <button type="button" class="redirect-registrazione btn" onclick="switchForm(true)">Registrati</button>
+                                        <button type="button" class="redirect-registrazione btn" onclick="switchForm('form-accesso', 'form-registrazione')">Registrati</button>
                                     </div>
                                 </div>
                             </div>
@@ -60,8 +60,7 @@
                     </form>
                     
                     <!-- Form registrazione -->
-                    <!-- TODO Il form scompare se visto da schermo piccolo -->
-                    <form action="" method="post" class="container col-12 col-md-9 d-block" id="form-registrazione"> <!-- TODO Aggiungere php | d-none-->
+                    <form action="" method="post" class="container col-12 col-md-9 d-none" name="form-registrazione" id="form-registrazione"> <!-- TODO Aggiungere php | d-none-->
                         <div class="row">
                             <div class="col-12 col-lg-6">
                                 <div class="mb-3">
@@ -120,9 +119,18 @@
                                 <div class=" w-75">
                                     <input type="submit" class="btn pulsante-accesso fs-5 bg-blu-chiaro text-white w-100 mb-2" value="REGISTRATI">
                                     <div>
-                                        <button type="button" class="redirect-registrazione btn" onclick="switchForm(false)">Accedi</button>
+                                        <button type="button" class="redirect-registrazione btn" onclick="switchForm('form-registrazione', 'form-accesso')">Accedi</button>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Password dimenticata -->
+                    <form action="" method="post" class="" name="form-password-dimenticata" id="form-password-dimenticata">
+                        <div class="row">
+                            <div class="col">
+                                
                             </div>
                         </div>
                     </form>
