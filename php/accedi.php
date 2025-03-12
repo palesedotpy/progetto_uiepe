@@ -6,17 +6,16 @@
         $conn = create_connection();
 
         $email = $_POST["login-email"];
+        $password = $_POST["login-password"];
 
-        $query = "SELECT email, password FROM u_utente";
+        $query = "SELECT email, password FROM u_utente WHERE email='$email'";
         $res = $conn -> query($query);
 
-        print_r($res -> fetch_assoc());
-        echo "<br>";
         if (($res -> num_rows) >= 1) {
-            header('Location: home.html');
+            header('Location: home.php');
         }
         else {
-            header('Location: index.html?error=1');
+            header('Location: ../index.php?error=1');
         }
     }
 ?>
