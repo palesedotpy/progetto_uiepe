@@ -16,7 +16,7 @@
             <div class="row h-100 flex-column flex-md-row h-md-auto">
                 <div class="col-12 col-md-6 p-3 bg-blu-scuro text-white text-center d-flex flex-md-column flex-row justify-content-center align-items-center">
                     <div class="w-50 mb-4" id="logo">
-                        <img src="assets/immagini/logo-gv.png" class="img-fluid logo-gv " alt="logo">
+                        <img src="assets/immagini/logo-gv.png" class="img-fluid logo-gv "    alt="logo">
                         <img src="assets/immagini/bandiera.png" class="img-fluid " alt="">
                     </div>
                     <div id="nome">
@@ -28,18 +28,18 @@
              
                 <div class="col-12 col-md-6 p-3 text-center d-flex justify-content-center align-items-center">
                     <!-- Form Accesso -->
-                    <form action="" method="post" class="container col-12 col-md-9 d-block" name="form-accesso" id="form-accesso"> <!-- TODO Aggiungere php | d-block-->
+                    <form action="php/accedi.php" method="post" class="container col-12 col-md-9 d-block" name="form-accesso" id="form-accesso"> <!-- TODO Aggiungere php | d-block-->
                         <div class="row">
                             <div class="mb-3">
                                 <label for="login-email-input" class="fs-4 form-label text-start w-100">Email</label>
-                                <input type="email" class="form-control" id="login-email-input">
+                                <input type="email" class="form-control" id="login-email-input" name="login-email">
                             </div>
                         </div>
                         <div class="row">
                             <div class="mb-4">
                                 <label for="password_input" class="fs-4 form-label text-start w-100">Password</label>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <input type="password" class="form-control" id="login-password-input" name="password" aria-describedby="passwordDimenticata">
+                                    <input type="password" class="form-control" id="login-password-input" name="login-password" aria-describedby="passwordDimenticata">
                                     <button type="button" class="mostra-password btn" id="show-password" data-password-visibile onclick="mostraPassword('login-password-input', 'immagine-mostra-password', this, event)">
                                         <img src="assets/immagini/mostra.png" class="img-fluid mostra-password" alt="mostra password" id="immagine-mostra-password">
                                     </button>
@@ -143,4 +143,3 @@
         <script src="js/index/formSwitch.js"></script>
     </body>
 </html>
-
